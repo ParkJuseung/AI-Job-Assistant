@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/XE
+    username: system
+    password: java1234
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: update  # 개발 시에는 update, 배포 시에는 validate
+    show-sql: true
+  logging:
+    level:
+      org.hibernate.SQL: debug
